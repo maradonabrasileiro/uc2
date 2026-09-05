@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:Arial, sans-serif;
 }
 
 #fundo{
@@ -26,26 +27,26 @@
     padding-right: 50px;
     gap: 28px;
     padding: 0 50px;
-    font-family: Arial,sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 /* Links normais (Início, Sobre Nós) */
 #header .nav-link {
-  color: #1e70bf;            /* Cor azul das letras */
-  text-decoration: none;     /* Remove o sublinhado */
+  color: #1e70bf;            
+  text-decoration: none;     
   font-weight: bold;
   font-size: 18px;
 }
 
 /* Botão pílula azul (Fazer Login) */
 #header .btn-login {
-  background-color: #1e70bf; /* Fundo azul do botão */
-  color: #ffffff;            /* Texto branco */
-  text-decoration: none;     /* Remove o sublinhado */
+  background-color: #1e70bf; 
+  color: #ffffff;          
+  text-decoration: none;    
   font-weight: bold;
   font-size: 18px;
-  padding: 12px 28px;        /* Dá o formato arredondado ao redor do texto */
-  border-radius: 14px;       /* Curvatura dos cantos */
+  padding: 12px 28px;       
+  border-radius: 14px;      
 }
 
 .logo img{
