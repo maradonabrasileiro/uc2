@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Sans:wght@200..800&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:Arial, sans-serif;
+    font-family: 'Momo Trust Sans', sans-serif;
 }
 
 #fundo{
@@ -10,7 +12,7 @@
     display: flex;
     flex-direction: column;
     width:100%;
-    height: 2200px;
+    height: 1655px;
     background-color: black;
 }
 
@@ -65,7 +67,7 @@
     position: relative;
     width: 100%;
     height: 350px;
-    background:linear-gradient(to bottom, #ffdde1, #ffffff);
+    background: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -90,55 +92,34 @@ p{
 position: relative;
 width: 100%;
 height: 700px;
-background:linear-gradient(to bottom, #e0f2fe, #a8c0ff);
+background:#2449A4;
 padding: 40px 60px;
 box-sizing: border-box;
 }
 
 a{
-    font-size: 38px;
-}
-
-#img-meio{
-    position: relative;
-    width: 100%;
-    height: 500px;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-#img-meio img{
-    flex: 1;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 25px;
+    font-size: 28px;
+    color: #2449A4
 }
 
 #mivio{
    padding: 20px;
-   background-color: white
+   background-color:white;
 }
 
 #mivio dt{
     font-weight: bold;
-    font-size: 35px;
-    color: black;
+    font-size: 28px;
+    color: #2449A4;
     margin-top: 15px;
-    background-color:pink
 }
 
 #mivio dd {
-    font-size: 28px;
+    font-size: 22px;
     margin-left: 0;
     margin-bottom: 10px;
     line-height: 1,5;
-    color: black;
+    color: #2449A4;
 }
 
 #footer{
@@ -161,7 +142,7 @@ a{
 #contando-historia h2 {
   font-size: 28px;
   font-weight: bold;
-  color: #333333;
+  color: white;
   margin-top: 15px;
   margin-bottom: 5px;
 }
@@ -170,6 +151,274 @@ a{
   font-size: 22px;
   font-style: italic;
   line-height: 1.5;
-  color: #555555;
+  color: white;
   margin-bottom: 15px;
+}
+
+.info-lateral {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 45%;
+}
+
+.card-info {
+  background-color: #f4f7fb;
+  border-left: 5px solid #5b9bd5;
+  padding: 15px 20px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.card-info h3 {
+  margin: 0 0 5px 0;
+  color: #2b4c7e;
+  font-size: 1.1rem;
+}
+
+.card-info p {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.valores-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 20px;
+  background-color:#B90061;
+  height:200px;
+  gap:200px;
+}
+
+.valor-card {
+  background: rgba(255, 255, 255, 0.08); /* Fundo sutil para destacar no escuro */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.valor-card span {
+  font-size: 1.8rem;
+}
+
+.valor-card h4 {
+  margin: 10px 0 5px 0;
+  font-size: 1.1rem;
+  color:yellow;
+}
+
+.valor-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: white;
+}
+
+
+/* Container do Card Interativo */
+.card-interativo {
+  width: 140px;
+  height: 140px;
+  perspective: 1000px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+/* Estrutura interna para animação 3D */
+.card-frente, .card-verso {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  transition: transform 0.6s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+/* Frente do Card */
+.card-frente {
+  background: linear-gradient(135deg, #e3f2fd, #ffffff);
+  border: 2px solid #5b9bd5;
+  color: #2b4c7e;
+}
+
+.icone-tea {
+  font-size: 2.2rem;
+}
+
+.dica-clique {
+  font-size: 0.75rem;
+  margin-top: 5px;
+  color: #5b9bd5;
+  font-weight: bold;
+}
+
+/* Verso do Card */
+.card-verso {
+  background-color: #5b9bd5;
+  color: #ffffff;
+  transform: rotateY(180deg);
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.2;
+}
+
+/* Efeito ao Clicar (Gira o card) */
+.card-interativo.virado .card-frente {
+  transform: rotateY(180deg);
+}
+
+.card-interativo.virado .card-verso {
+  transform: rotateY(360deg);
+}
+
+/* Animação suave ao passar o mouse */
+.card-interativo:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+#img-meio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly; /* Distribui o espaço por igual entre os elementos */
+  gap: 30px;                     /* Define um espaçamento mínimo entre cada item */
+  padding: 40px 5%;              /* Dá uma margem interna confortável nas laterais */
+  width: 100%;
+  box-sizing: border-radius;
+  background-color: #ffffff;
+}
+
+/* Imagem com tamanho controlado para não empurrar nada */
+#img-meio img {
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: contain;
+}
+
+/* Card Interativo Ajustado (Fixo para não quebrar o flex) */
+.card-interativo {
+  width: 120px;
+  height: 120px;
+  min-width: 120px; /* Garante que não vá espremer */
+  position: relative;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-frente, .card-verso {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  transition: transform 0.6s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.card-frente {
+  background: #f0f7ff;
+  border: 2px solid #5b9bd5;
+  color: #2b4c7e;
+}
+
+.card-verso {
+  background-color: #5b9bd5;
+  color: #ffffff;
+  transform: rotateY(180deg);
+  font-size: 0.75rem;
+}
+
+.card-interativo.virado .card-frente {
+  transform: rotateY(180deg);
+}
+
+.card-interativo.virado .card-verso {
+  transform: rotateY(360deg);
+}
+
+.icone-tea {
+  font-size: 1.8rem;
+}
+
+.dica-clique {
+  font-size: 0.7rem;
+  margin-top: 4px;
+  color: #5b9bd5;
+  font-weight: bold;
+}
+
+/* Bloco dos cards de texto à direita */
+.info-lateral {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 320px; /* Evita que o texto fique gigante e caia */
+  width: 100%;
+}
+
+.card-info {
+  background-color: #f4f7fb;
+  border-left: 4px solid #5b9bd5;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.card-info h3 {
+  margin: 0 0 3px 0;
+  color: #2b4c7e;
+  font-size: 0.95rem;
+}
+
+.card-info p {
+  margin: 0;
+  color: #555;
+  font-size: 0.8rem;
+}
+
+.divisor-secao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px 0;
+  width: 100%;
+  background-color:#2449A4;
+}
+
+.titulo-divisor {
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: yellow;
+  margin: 0;
+}
+
+.linha {
+  flex: 1;
+  max-width: 120px;
+  height: 1px;
+  background-color: #ddd;
 }
